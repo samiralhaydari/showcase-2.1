@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="72" viewBox="0 0 360 72">
+  <circle cx="34" cy="36" r="22" fill="none" stroke="#E8B04A" stroke-width="3"/>
+  <path d="M19 43 L28 34 L35 39 L49 25" fill="none" stroke="#EDE8DA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="49" cy="25" r="3.5" fill="#E8B04A"/>
+  <path d="M50 53 L62 65" stroke="#E8B04A" stroke-width="4" stroke-linecap="round"/>
+  <text x="76" y="33" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700" fill="#EDE8DA" letter-spacing="0.2">MYR SupplyLens</text>
+  <text x="77" y="54" font-family="Verdana, Arial, sans-serif" font-size="10.5" fill="#9FB0C9" letter-spacing="2.2">PREDICT · PLAN · PROCURE · PROFIT</text>
+</svg>
