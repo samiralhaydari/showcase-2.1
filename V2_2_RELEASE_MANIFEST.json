@@ -1,0 +1,31 @@
+{
+  "project": "MYR SupplyLens",
+  "version": "V2.2",
+  "model_type": "joint_multicurrency",
+  "currencies": [
+    "USD",
+    "CNY",
+    "IDR",
+    "SGD",
+    "THB",
+    "JPY",
+    "KRW"
+  ],
+  "lookback_sessions": 90,
+  "forecast_horizon_sessions": 63,
+  "features_per_currency": 9,
+  "input_channels": 63,
+  "joint_output_values": 441,
+  "max_epochs": 1000,
+  "epochs_completed": 73,
+  "batch_size": 128,
+  "training_device": "/GPU:0",
+  "accelerator": "GPU",
+  "gpu_name": "Tesla T4",
+  "early_stopping_patience": 70,
+  "include_arima": true,
+  "latest_common_observation": "2026-11-13",
+  "common_observations": 5206,
+  "created_at_utc": "2026-11-15T05:09:04.750029+00:00",
+  "deployment_note": "Deploy updated source code and V2.2 artifacts together. V2.2 requires the full currency panel at inference."
+}

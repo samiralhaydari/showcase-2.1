@@ -1,0 +1,50 @@
+MYR SupplyLens V2.1.1 patch manifest
+=====================================
+
+This is a runtime-safe repackaging of the V2.1 source patch. It preserves the
+V2.1 benchmark-aware forecasting logic and replaces the Colab dependency
+strategy/documentation. It does NOT contain or overwrite trained model weights,
+scalers, raw/processed data, SQLite records, supplier records or invoice records.
+
+Runtime safety guarantees:
+- No programmatic runtime restart or kernel shutdown API.
+- No process-kill fallback (no os.kill or SIGKILL).
+- No TensorFlow installation or forced replacement in Colab.
+- Dynamic pip constraints preserve the core package versions already present.
+- The notebook stops if core package versions change unexpectedly.
+
+V2.1 model outputs continue to use _v2_1_ filenames. Existing V2/V1 artifacts
+remain available as inference fallbacks.
+
+Included source files:
+- .gitignore
+- README.md
+- README_V2_UPGRADE.md
+- requirements-colab.txt
+- requirements-local.txt
+- app.py
+- src/__init__.py
+- src/supplylens/__init__.py
+- src/supplylens/config.py
+- src/supplylens/features.py
+- src/supplylens/evaluation.py
+- src/supplylens/model.py
+- src/supplylens/training.py
+- src/supplylens/forecasting.py
+- src/supplylens/ui_helpers.py
+- src/supplylens/data.py
+- src/supplylens/business.py
+- src/supplylens/database.py
+- pages/01_FX_Forecast_Centre.py
+- pages/02_Procurement_Cost_Simulator.py
+- pages/03_Supplier_Comparison.py
+- pages/04_Profitability_Simulator.py
+- pages/05_Model_Insights.py
+- scripts/train_model.py
+- scripts/inspect_data.py
+- tests/test_business.py
+- tests/test_features.py
+- tests/test_evaluation.py
+- tests/test_forecasting.py
+
+The separate MYR_SupplyLens_V2_1_1_Colab.ipynb is supplied alongside this ZIP.
