@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+USD,5,Random walk,selection-partition MAE,0.020488805970149213,0.02833468814437179,134,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+USD,21,Random walk,selection-partition MAE,0.04976562499999995,0.060239042053306206,32,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+USD,42,"ARIMA(1,1,1)",selection-partition MAE,0.08007990145360577,0.0940445216922163,14,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+USD,63,Random walk,selection-partition MAE,0.09649999999999972,0.1080680551571763,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.

@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+KRW,5,"ARIMA(1,1,1)",selection-partition MAE,2.456309493980382e-05,3.2023118806504085e-05,90,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+KRW,21,Historical drift (252),selection-partition MAE,3.898990223064711e-05,5.1535749774035454e-05,22,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+KRW,42,Historical drift (252),selection-partition MAE,4.121359096692743e-05,5.867471678232772e-05,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+KRW,63,Historical drift (252),selection-partition MAE,0.00010189353298257467,0.00011908480193331007,8,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.

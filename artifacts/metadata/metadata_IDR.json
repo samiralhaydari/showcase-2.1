@@ -1,0 +1,26 @@
+{
+  "currency": "IDR",
+  "rate_convention": "MYR per 1 IDR",
+  "source": "Bank Negara Malaysia via data.gov.my",
+  "source_url": "https://data.gov.my/data-catalogue/exchangerates_daily_1200",
+  "rate_type": "middle",
+  "lookback": 90,
+  "forecast_horizon": 63,
+  "feature_columns": [
+    "log_rate",
+    "return_1d",
+    "momentum_5",
+    "momentum_20",
+    "volatility_20"
+  ],
+  "architecture": "Conv1D(32, kernel=3) -> MaxPooling1D -> LSTM(32) -> Dropout(0.20) -> Dense(32) -> Dense(horizon)",
+  "trained_at_utc": "2026-11-04T08:06:21.016301+00:00",
+  "latest_observation_date": "2026-11-04",
+  "latest_rate": 0.000225,
+  "train_samples": 4810,
+  "validation_samples": 1001,
+  "test_samples": 1002,
+  "best_validation_loss": 0.0036709876731038094,
+  "epochs_completed": 35,
+  "prediction_intervals": "Not calibrated in this starter version."
+}

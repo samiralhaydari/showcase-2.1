@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+JPY,5,Random walk,selection-partition MAE,0.0002798,0.00036769477076026546,90,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+JPY,21,"ARIMA(1,1,1)",selection-partition MAE,0.0005516180100390206,0.0007372525216554248,22,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+JPY,42,Historical drift (252),selection-partition MAE,0.000633973596941561,0.0009492290303939321,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+JPY,63,Historical drift (252),selection-partition MAE,0.000888769399129739,0.0012746760614849922,8,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.

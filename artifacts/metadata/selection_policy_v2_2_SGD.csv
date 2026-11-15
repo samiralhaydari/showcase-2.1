@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+SGD,5,"ARIMA(1,1,1)",selection-partition MAE,0.00959777242061156,0.012129629620721413,90,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+SGD,21,CNN-LSTM,selection-partition MAE,0.02218241333183858,0.025888807101724344,22,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+SGD,42,"ARIMA(1,1,1)",selection-partition MAE,0.01780579699056626,0.02471998640837297,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+SGD,63,"ARIMA(1,1,1)",selection-partition MAE,0.03441117147953732,0.04818098529971027,8,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.

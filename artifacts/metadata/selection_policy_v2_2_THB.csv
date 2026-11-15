@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+THB,5,Historical drift (252),selection-partition MAE,0.0007530537382160847,0.0009507905945549929,90,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+THB,21,Random walk,selection-partition MAE,0.0014983181818181807,0.0019476462601164142,22,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+THB,42,Random walk,selection-partition MAE,0.0019984545454545467,0.0024954043760481,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+THB,63,Historical drift (252),selection-partition MAE,0.002467956564294887,0.003017554902059962,8,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.

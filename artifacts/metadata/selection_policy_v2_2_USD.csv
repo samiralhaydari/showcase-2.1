@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+USD,5,Random walk,selection-partition MAE,0.0171488888888889,0.02372856225452073,90,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+USD,21,CNN-LSTM,selection-partition MAE,0.043467904121208954,0.057426426300909154,22,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+USD,42,Historical drift (252),selection-partition MAE,0.04639118367889279,0.0687752748093394,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+USD,63,CNN-LSTM,selection-partition MAE,0.08328989957716781,0.09828435577484752,8,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.

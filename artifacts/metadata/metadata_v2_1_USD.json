@@ -1,0 +1,89 @@
+{
+  "model_version": "v2_1",
+  "currency": "USD",
+  "rate_convention": "MYR per 1 USD",
+  "source": "Bank Negara Malaysia via data.gov.my",
+  "source_url": "https://data.gov.my/data-catalogue/exchangerates_daily_1200",
+  "rate_type": "middle",
+  "lookback": 90,
+  "forecast_horizon": 63,
+  "feature_columns": [
+    "log_rate",
+    "return_1d",
+    "momentum_5",
+    "momentum_10",
+    "momentum_20",
+    "volatility_5",
+    "volatility_20",
+    "volatility_60",
+    "range_20"
+  ],
+  "architecture": "Conv1D(32, kernel=3, causal) -> MaxPooling1D(2) -> LSTM(32) -> Dropout(0.20) -> Dense(32, ReLU) -> Dense(horizon)",
+  "trained_at_utc": "2026-11-14T09:37:48.755635+00:00",
+  "latest_observation_date": "2026-11-13",
+  "latest_rate": 4.085,
+  "train_samples": 4227,
+  "validation_samples": 668,
+  "selection_samples": 668,
+  "calibration_samples": 303,
+  "test_candidate_samples": 1033,
+  "walk_forward_origins": 17,
+  "walk_forward_spacing": 63,
+  "walk_forward_method": "Fixed trained model; final test origins spaced by 63 observations so target blocks do not overlap across reported horizons.",
+  "split_fractions": {
+    "train": 0.6,
+    "validation": 0.1,
+    "selection": 0.1,
+    "calibration": 0.05,
+    "test": 0.15
+  },
+  "selection_method": "Per-currency, per-horizon selection on a separate chronological selection partition not used for gradient updates or early stopping. Lowest validation MAE wins; RMSE and absolute-error standard deviation break ties.",
+  "selection_min_origins": 8,
+  "selection_spacing_by_horizon": {
+    "5": 5,
+    "21": 21,
+    "42": 42,
+    "63": 63
+  },
+  "selection_policy": [
+    {
+      "horizon": 5,
+      "selected_model": "Random walk",
+      "n_selection_origins": 134
+    },
+    {
+      "horizon": 21,
+      "selected_model": "Random walk",
+      "n_selection_origins": 32
+    },
+    {
+      "horizon": 42,
+      "selected_model": "ARIMA(1,1,1)",
+      "n_selection_origins": 14
+    },
+    {
+      "horizon": 63,
+      "selected_model": "Random walk",
+      "n_selection_origins": 11
+    }
+  ],
+  "benchmarks": [
+    "Random walk",
+    "Historical drift (252)",
+    "Recent drift (20)",
+    "ARIMA(1,1,1)"
+  ],
+  "cnn_lstm_horizons_beating_random_walk": 3,
+  "cnn_lstm_horizons_evaluated": 4,
+  "best_validation_loss": 0.38869357109069824,
+  "epochs_completed": 14,
+  "calibration_method": "Method-specific empirical absolute log-error quantiles from a separate chronological calibration partition. Calibration origins are thinned by stride 5; forecast windows can overlap, so intervals are descriptive scenario bands and not formal conformal coverage guarantees.",
+  "calibration_origin_stride": 5,
+  "calibration_min_samples": 30,
+  "arima_included": true,
+  "metric_definitions": {
+    "mae_skill_vs_random_walk_pct": "100 * (1 - model_MAE / random_walk_MAE)",
+    "rmse_skill_vs_random_walk_pct": "100 * (1 - model_RMSE / random_walk_RMSE)",
+    "directional_accuracy_pct": "Not applicable to random walk because it predicts no directional change."
+  }
+}

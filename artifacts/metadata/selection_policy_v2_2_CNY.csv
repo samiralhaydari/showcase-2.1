@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+CNY,5,CNN-LSTM,selection-partition MAE,0.0026090448378336406,0.0035833835597800403,86,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+CNY,21,CNN-LSTM,selection-partition MAE,0.006048917623990296,0.00782184601580982,21,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+CNY,42,Historical drift (252),selection-partition MAE,0.006172374295181016,0.008269492011785378,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+CNY,63,"ARIMA(1,1,1)",selection-partition MAE,0.011816511061145327,0.014444941101568928,8,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.

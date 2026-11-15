@@ -1,0 +1,5 @@
+currency,horizon,selected_model,selection_metric,selection_mae,selection_rmse,n_selection_origins,eligible_candidate_count,selection_fallback,selection_reason
+IDR,5,Random walk,selection-partition MAE,1.4555555555555536e-06,2.002775851439973e-06,90,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+IDR,21,Random walk,selection-partition MAE,3.09090909090908e-06,3.9196474795109215e-06,22,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+IDR,42,Random walk,selection-partition MAE,3.4545454545454545e-06,4.572645941803378e-06,11,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
+IDR,63,Random walk,selection-partition MAE,3.6249999999999932e-06,4.8862050714230084e-06,8,5,False,Lowest selection-partition MAE; RMSE and error variability break ties.
